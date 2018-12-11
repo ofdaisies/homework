@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<title>not interesting</title>
+		<style type="text/css"> 
+			.drophover:hover > .dropdown-menu{ 
+			display: block; 
+			margin: 0; 
+			} 
+		</style> 
+  </head>
+  <body>
+  
+	<nav class="navbar navbar-light bg-light navbar-expand-md">
+		<a href="my portfolio.html" class="navbar-brand">My portfolio</a>
+	
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="navbar-item">
+					<a href="index.html" class="nav-link"> Homepage</a>
+				</li>
+					<li class="navbar-item">
+					<ul class="navbar-nav"> 
+						<li class="nav-item dropdown drophover"> 
+							<a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">Blog</a> 
+							<div class="dropdown-menu"> 
+								<a class="dropdown-item" href="math.html">math</a> 
+								<a class="dropdown-item" href="kitty.html">kitty</a> 
+								<div class="dropdown-divider"></div> 
+								<div class="btn-group dropright drophover"> 
+									<a class="dropdown-toggle dropdown-item" style="cursor: pointer;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+										dropdown-toggle 
+									</a> 
+									<div class="dropdown-menu"> 
+										<a class="dropdown-item" href="#">yeah,it is!</a>
+									</div>		
+								</div> 
+							</div> 
+						</li>
+					</ul>
+				</li>
+				<li class="navbar-item">
+					<a href="#" class="nav-link"> About</a>
+				</li>
+				<li class="navbar-item">
+					<a href="contacts.html" class="nav-link"> Contacts</a>
+				</li>
+			</ul>	
+		</div>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+			<span class ="navbar-toggler-icon"></span>
+		</button>
+		
+	</nav>	
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="index.html">Homepage</a></li>
+			<li class="breadcrumb-item active" aria-current="page">About</li>
+		</ol>
+	</nav>
+	<div class="container">	
+		<h2 class="display-3 text-center">History of the brand</h2>
+		<div id="accordion">
+			<div class="card">
+				<div class="card-header" id="headingOne">
+					<h5 class="mb-0">
+						<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						  Step 1
+						</button>
+					</h5>
+				</div>
+				<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+					<div class="card-body">Idea</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" id="headingTwo">
+					<h5 class="mb-0">
+						<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						  Step 2
+						</button>
+					</h5>
+				</div>
+				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+					<div class="card-body">Purpose</div>	  
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" id="headingThree">
+				  <h5 class="mb-0">
+					<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+					  Step 3
+					</button>
+				  </h5>
+				</div>
+				<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+					<div class="card-body">Actions</div>			  
+				</div>
+			</div>
+		</div>
+	</div>	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
