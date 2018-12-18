@@ -1,0 +1,78 @@
+<html> 
+	<head> 
+		<title>Functions</title> 
+		<meta charset="utf-8"> 
+		<table id="table"></table>	
+		<script> 
+			function getRandomInt(min,max) { 
+				var min = document.getElementById('min').value; 
+				var max = document.getElementById('max').value; 
+				var rand = min - 0.5 + Math.random() * (max - min )
+				rand = Math.round(rand);
+				console.log(rand);
+				return rand;
+			}
+			function getArray(n){
+				var n = document.getElementById('n').value;
+				var b=[];
+				if (n<=0){
+					console.log('неккоретные входные')
+					return
+				}
+
+				for (var i = 0; i < n; i++){
+					b[i]=getRandomInt(min,max);
+				}
+			}
+			function getResultArray(n){
+				var table= document.querySelector('#table');
+				var n = document.getElementById('n').value;
+				var a=[],matrix=[];
+				if (n<=0) {
+					console.log('неккоретные входные')
+					return
+				}
+
+				for (var i = 0; i < n*n; i++){
+					a.push(getRandomInt(min,max));
+				}
+				a.sort((a, b) => a - b);
+				console.log(a);
+				for (var i = 0; i < n; i++){
+					matrix[i]=[];
+					for (var j = 0; j < n; j++){
+					if (i%2==1){
+						matrix[i][j]=a[n*n-1-i*3-j]
+					}
+					if (i%2==0){
+						matrix[i][j]=a[n*n-1-i*3-n+1+j]
+					}	
+					}
+				}
+				for (var i = 0; i < n; i++){
+					var tr= document.createElement('tr');
+					for (var j = 0; j < n; j++){
+						var td= document.createElement('td');
+						td.innerHTML= matrix[i][j];
+						tr.appendChild(td);
+					}
+					table.appendChild(tr);
+				}	
+				console.log(matrix)
+				return  matrix
+			}
+		</script> 
+	</head> 
+	<body> 
+		<form> 
+			min:<input id="min" type="number"><br> 
+			max :<input id="max" type="number"><br> 
+		</form> 
+		<button onClick="getRandomInt()">Random</button> 
+		<form> 
+			n:<input id="n" type="number"><br> 
+		</form> 
+		<button onClick="getArray()">Random1</button> 
+		<button onClick="getResultArray()">Random2</button> 
+	</body> 
+</html>
